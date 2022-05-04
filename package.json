@@ -1,0 +1,47 @@
+{
+  "name": "dulcet-uglify-js",
+  "description": "JavaScript parser, mangler/compressor and beautifier toolkit",
+  "author": "NKDuy",
+  "license": "BSD-2-Clause",
+  "version": "2.8.29",
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/khanhduy1407/dulcet-uglify-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/khanhduy1407/dulcet-uglify-js/issues"
+  },
+  "main": "tools/node.js",
+  "bin": {
+    "uglifyjs": "bin/uglifyjs"
+  },
+  "files": [
+    "bin",
+    "lib",
+    "tools",
+    "LICENSE"
+  ],
+  "dependencies": {
+    "source-map": "~0.5.1",
+    "yargs": "~3.10.0"
+  },
+  "devDependencies": {
+    "acorn": "~5.0.3",
+    "mocha": "~2.3.4"
+  },
+  "optionalDependencies": {
+    "dulcet-uglify-to-browserify": "~1.0.2"
+  },
+  "browserify": {
+    "transform": [
+      "dulcet-uglify-to-browserify"
+    ]
+  },
+  "scripts": {
+    "test": "node test/run-tests.js"
+  },
+  "keywords": ["uglify", "uglify-js", "minify", "minifier"]
+}
